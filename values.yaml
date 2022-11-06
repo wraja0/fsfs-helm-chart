@@ -1,0 +1,25 @@
+db:
+  name: 
+  host: 
+  password: 
+  port: 
+  username: 
+deployment:
+  user: 
+    name: 
+    image: 
+    port: 
+    path: 
+  branch:
+    name: 
+    image:
+    port: 
+    path: 
+  underwriter: 
+    name: 
+    image: 
+    port: 
+    path: 
+albConfig: 
+  ingressName: 
+

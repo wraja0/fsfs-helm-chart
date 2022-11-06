@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Values.deployment.user.name}}
+spec:
+  ports:
+    - port: {{.Values.deployment.user.port}}
+      targetPort: {{.Values.deployment.user.port}}
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: {{.Values.deployment.user.name}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Values.deployment.branch.name}}
+spec:
+  ports:
+    - port: {{.Values.deployment.branch.port}}
+      targetPort: {{.Values.deployment.branch.port}}
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: {{.Values.deployment.branch.name}}
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Values.deployment.underwriter.name}}
+spec:
+  ports:
+    - port: {{.Values.deployment.underwriter.port}}
+      targetPort: {{.Values.deployment.underwriter.port}}
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: {{.Values.deployment.underwriter.name}}
